@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} Logyca - Números primos {% endblock %}
+
+{% block header_title %} API {% endblock%}
+
+
+{% block content %}
+
+<div class="container_api">
+    <h2>Solicitudes a la API <u>sin</u> guardar data consultada</h2>
+    <div>
+        <h3>* Números primos regulares</h3>
+        <div class="div_consult">
+            <label for="">Los primeros: </label>
+            <input class="input input_api" type="number" placeholder="" id="cant_reg_not" value="">
+            <button style="width: 10%;" class="button button_save" id="btn_cant_reg_not">Consultar</button>
+        </div>
+        <div class="result_request">
+
+        </div>
+    </div>
+    <div>
+        <h3>* Números primos gemelos</h3>
+        <div class="div_consult">
+            <label for="">Los primeros pares: </label>
+            <input class="input input_api" type="number" placeholder="" id="cant_twin_not" value="">
+            <button style="width: 10%;" class="button button_save" id="btn_cant_twin_not">Consultar</button>
+        </div>
+        <div class="result_request">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Solicitudes a la API <u>guardando</u> data consultada</h2>
+    <p>Cantidad límite: 1000 números por solicitud</p>
+    <div>
+        <h3>* Números primos regulares</h3>
+        <div class="div_consult">
+            <label for="">Los primeros: </label>
+            <input class="input input_api" type="number" placeholder="" id="cant_reg_yes" value="">
+            <button style="width: 10%;" class="button button_save" id="btn_cant_reg_yes">Consultar</button>
+        </div>
+        <div class="result_request">
+
+        </div>
+    </div>
+    <div>
+        <h3>* Números primos gemelos</h3>
+        <div class="div_consult">
+            <label for="">Los primeros pares: </label>
+            <input class="input input_api" type="number" placeholder="" id="cant_twin_yes" value="">
+            <button style="width: 10%;" class="button button_save" id="btn_cant_twin_yes">Consultar</button>
+        </div>
+        <div class="result_request">
+
+        </div>
+    </div>
+</div>
+{% endblock %}

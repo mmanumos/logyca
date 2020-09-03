@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/styles/index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>{% block title %} Logyca {% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo-logyca.png'  %}">
+</head>
+
+<body>
+
+    <header class="header">
+        <img class="header__img" src="{% static 'img/logo-logyca.png'  %}" alt="Logo Intellinext">
+
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="{% static 'img/api.png'  %}" alt="api">
+                <a href="/home/">API</a>
+            </div>
+        </div>
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="{% static 'img/user.png'  %}" alt="User">
+                <p>Profile</p>
+            </div>
+            <ul>
+                <li><a href="/login">Log out</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="block" id="list_reports">
+        <h1 class="main__title">{% block header_title %} Base {% endblock %}</h1>
+        {% block button %}{% endblock %}
+        {% block content %}
+        <br>
+
+        {% endblock %}
+    </section>
+
+    <footer class="footer">
+        <a href="#">Terminos de uso</a>
+        <a href="#">Políticas de privaciad</a>
+        <a href="#">Centro de ayuda</a>
+    </footer>
+</body>
+
+{% load static %}
+{% block script %}
+<script type="text/javascript" src="{% static '/scripts/base.js' %}"></script>
+{% endblock %}
+
+</html>
