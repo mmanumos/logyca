@@ -7,3 +7,6 @@ class Result(models.Model):
     type = models.CharField(max_length=8, null=False)
     range = models.IntegerField(null=False)
     result = models.CharField(max_length=10000, null=False)
+
+    def __str__(self):
+        return self.type + "_primes " + str(self.range)
