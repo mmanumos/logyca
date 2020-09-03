@@ -13,7 +13,7 @@ $('#btn_cant_reg_not').click(function () {
     let cant_reg_not = $("#cant_reg_not").val();
 
     if (cant_reg_not > 1000) {
-        alert('Esta solicitud puede tomar varios minutos.');
+        alert('Esta solicitud puede tardar un poco.');
     }
 
     if (cant_reg_not != "") {
@@ -62,7 +62,7 @@ $('#btn_cant_reg_yes').click(function () {
     let cant_reg_yes = $("#cant_reg_yes").val();
 
     if (cant_reg_yes > 1000) {
-        alert('Esta solicitud puede tomar varios minutos si no se ha realizado antes.');
+        alert('Esta solicitud puede tardar un poco si no se ha realizado antes.');
     }
 
     if (cant_reg_yes > 2000) {

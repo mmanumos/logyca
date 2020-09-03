@@ -5,26 +5,38 @@
 def list_regular_primes(quantity):
     """ Return a list with the required quantity of prime numbers """
     limit = quantity
-    list_primes = range_regular_primes(quantity)
+    list_primes = range_regular_primes(quantity, None, None, None)
     while len(list_primes) < limit:
+        start = quantity + 1
         quantity = quantity + int(quantity / 2)
-        list_primes = range_regular_primes(quantity)
+        end = quantity
+        list_primes = range_regular_primes(quantity, start, end, list_primes)
 
     list_primes = list_primes[0:limit]
     return list_primes
 
 
-def range_regular_primes(quantity):
+def range_regular_primes(quantity, start, end, list_temp):
     """ Return a list with the prime numbers from a range  """
-    range_primes = []
-    for num in range(2, quantity):
-        prime = True
-        for i in range(2, num):
-            if (num % i == 0):
-                prime = False
-        if prime:
-            range_primes.append(num)
-    return range_primes
+    if start is None:
+        range_primes = []
+        for num in range(2, quantity):
+            prime = True
+            for i in range(2, num):
+                if (num % i == 0):
+                    prime = False
+            if prime:
+                range_primes.append(num)
+        return range_primes
+    else:
+        for num in range(start, end):
+            prime = True
+            for i in range(2, num):
+                if (num % i == 0):
+                    prime = False
+            if prime:
+                list_temp.append(num)
+        return list_temp
 
 
 # Pair prime twins
