@@ -15,10 +15,12 @@
             <label for="">Los primeros: </label>
             <input class="input input_api" type="number" placeholder="" id="cant_reg_not" value="">
             <button style="width: 10%;" class="button button_save" id="btn_cant_reg_not">Consultar</button>
+            <lable class="button button_save info_gen" id="info_gen0"> Generando ...</label>
         </div>
-        <div class="result_request">
+        <textarea class="result_request" id="regular_primes_result">
 
-        </div>
+        </textarea>
+
     </div>
     <div>
         <h3>* Números primos gemelos</h3>
@@ -26,27 +28,29 @@
             <label for="">Los primeros pares: </label>
             <input class="input input_api" type="number" placeholder="" id="cant_twin_not" value="">
             <button style="width: 10%;" class="button button_save" id="btn_cant_twin_not">Consultar</button>
+            <lable class="button button_save info_gen" id="info_gen1"> Generando ...</label>
         </div>
-        <div class="result_request">
+        <textarea class="result_request" id="twin_primes_result">
 
-        </div>
+        </textarea>
     </div>
     <br>
     <br>
     <br>
     <br>
     <h2>Solicitudes a la API <u>guardando</u> data consultada</h2>
-    <p>Cantidad límite: 1000 números por solicitud</p>
+    <p>Cantidad límite: 2000 por solicitud</p>
     <div>
         <h3>* Números primos regulares</h3>
         <div class="div_consult">
             <label for="">Los primeros: </label>
             <input class="input input_api" type="number" placeholder="" id="cant_reg_yes" value="">
             <button style="width: 10%;" class="button button_save" id="btn_cant_reg_yes">Consultar</button>
+            <lable class="button button_save info_gen" id="info_gen2"> Generando ...</label>
         </div>
-        <div class="result_request">
+        <textarea class="result_request" id="regular_primes_result_save">
 
-        </div>
+        </textarea>
     </div>
     <div>
         <h3>* Números primos gemelos</h3>
@@ -54,10 +58,11 @@
             <label for="">Los primeros pares: </label>
             <input class="input input_api" type="number" placeholder="" id="cant_twin_yes" value="">
             <button style="width: 10%;" class="button button_save" id="btn_cant_twin_yes">Consultar</button>
+            <lable class="button button_save info_gen" id="info_gen3"> Generando ...</label>
         </div>
-        <div class="result_request">
+        <textarea class="result_request" id="twin_primes_result_save">
 
-        </div>
+        </textarea>
     </div>
 </div>
 {% endblock %}

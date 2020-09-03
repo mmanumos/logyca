@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from primos.views.views import home
+from primos.views.views import home, regular_primes, twin_primes, regular_primes_save, twin_primes_save
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('home/', home, name='home'),
+    path('regular_primes/<int:quantity>',
+         regular_primes, name='regular_primes'),
+    path('twin_primes/<int:quantity>',
+         twin_primes, name='twin_primes'),
+    path('regular_primes_save/<int:quantity>',
+         regular_primes_save, name='regular_primes_save'),
+    path('twin_primes_save/<int:quantity>',
+         twin_primes_save, name='twin_primes_save'),
 ]
